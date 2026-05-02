@@ -1,0 +1,36 @@
+{
+  "name": "team-task-manager",
+  "version": "1.0.0",
+  "description": "Full-stack Team Task Manager with role-based access control",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "postinstall": "prisma generate",
+    "db:setup": "prisma migrate deploy && node prisma/seed.js",
+    "db:seed": "node prisma/seed.js"
+  },
+  "keywords": [
+    "task-manager",
+    "project-management",
+    "express",
+    "prisma"
+  ],
+  "author": "",
+  "license": "ISC",
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^5.0.0"
+  }
+}
